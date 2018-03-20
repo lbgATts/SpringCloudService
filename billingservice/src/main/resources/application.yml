@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: billing-service
+server:
+  port: 18005
+  instance:
+    hostname: localhost
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:18001/eureka/
+
+zuul:
+  routes:
+    billing-service: /billing-controller/**
